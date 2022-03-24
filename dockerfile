@@ -3,6 +3,8 @@ FROM ubi8/nodejs-14 as build-deps
 RUN adduser node root
 WORKDIR /usr/src/app
 RUN chown -R node:node /usr/src/app
+RUN chmod -R 775 /usr/src/app
+
 USER 1000
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install
