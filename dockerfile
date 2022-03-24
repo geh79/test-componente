@@ -1,5 +1,5 @@
 # CRA
-FROM node:17-alpine as build-deps
+FROM node:14-alpine as build-deps
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install
