@@ -3,6 +3,6 @@ services:
   
   nginx_service:
     container_name: test_nginx_component
-    build: .
+    image: pruebadockerokd:latest
     ports:
       - 8012:80
