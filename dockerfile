@@ -10,6 +10,5 @@ COPY . ./
 RUN npm run build
 # nginxRUN adduser node root
 FROM registry.access.redhat.com/ubi8/nginx-120
-RUN adduser node root
 COPY --from=build-deps /usr/src/app/dist /usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
