@@ -1,5 +1,5 @@
 # node
-FROM node:14-alpine as build-deps
+FROM node:12-alpine as build-deps
 WORKDIR /usr/src/app
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install
